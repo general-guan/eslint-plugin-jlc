@@ -11,7 +11,6 @@
 const rule = require("../../../lib/rules/no-var"),
   RuleTester = require("eslint").RuleTester;
 
-
 //------------------------------------------------------------------------------
 // Tests
 //------------------------------------------------------------------------------
@@ -20,12 +19,14 @@ const ruleTester = new RuleTester();
 ruleTester.run("no-var", rule, {
   valid: [
     // give me some code that won't trigger a warning
+    "let a = 123456",
   ],
 
   invalid: [
     {
-      code: "",
-      errors: [{ messageId: "Fill me in.", type: "Me too" }],
+      code: "var a = 123456",
+      output: "let a = 123456",
+      errors: [{ messageId: "noVar", type: "VariableDeclaration" }],
     },
   ],
 });
