@@ -11,7 +11,6 @@
 const rule = require("../../../lib/rules/no-new-func"),
   RuleTester = require("eslint").RuleTester;
 
-
 //------------------------------------------------------------------------------
 // Tests
 //------------------------------------------------------------------------------
@@ -20,12 +19,13 @@ const ruleTester = new RuleTester();
 ruleTester.run("no-new-func", rule, {
   valid: [
     // give me some code that won't trigger a warning
+    "const x = function backAdd(a, b) { return a + b }",
   ],
 
   invalid: [
     {
-      code: "",
-      errors: [{ messageId: "Fill me in.", type: "Me too" }],
+      code: "const x = new Function('a', 'b', 'return a + b')",
+      errors: [{ messageId: "noNewFunc", type: "NewExpression" }],
     },
   ],
 });
