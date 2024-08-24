@@ -57,7 +57,7 @@ TODO: Run eslint-doc-generator to generate the rules list.
 - [ ] [强制]目录、JS、CSS、SCSS、HTML、TS、Vue 及静态文件命名：全部采用小写方式， 以中划线分隔（kebab-case）
 - [ ] [强制]Vue 的组件使用名称及标签值：全部采用小写方式， 以中划线分隔（kebab-case）
 - [x] [强制]变量和函数、参数命名：全部采用小写驼峰命名（camelCase），代码中的命名开头结尾不允许使用下划线或符号（系统级命名除外）
-- [ ] [强制]export 结构体/类/单例/函数库/对象：采用大写驼峰命名（PascalCase ）
+- [x] [强制]export 结构体/类/单例/函数库/对象：采用大写驼峰命名（PascalCase ）
 - [x] [强制]变量、常量声明：不推荐使用 var，全局变量使用 let；常量使用 const
 - [x] [强制]禁用 Function 构造函数创建函数，不过可以使用函数表达式
 - [ ] [强制]promise 不要嵌套，可以使用 aync/await 进行处理，逻辑更清晰
