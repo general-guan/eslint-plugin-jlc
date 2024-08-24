@@ -63,4 +63,4 @@ TODO: Run eslint-doc-generator to generate the rules list.
 - [ ] [强制]promise 不要嵌套，可以使用 aync/await 进行处理，逻辑更清晰
 - [x] [建议]字符串拼接：推荐使用 es6 字符串模版字面量进行拼接
 - [x] [建议]比较运算符：始终使用 === 和 !==；避免使用 == 和 !=
-- [ ] [建议]尽量避免使用!important
+- [ ] [建议]尽量避免使用 !important
