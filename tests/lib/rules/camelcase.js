@@ -26,19 +26,19 @@ ruleTester.run("camelcase", rule, {
   invalid: [
     {
       code: "const loading_modules = {}",
-      errors: [{ messageId: "camelcase", type: "Identifier" }],
-    },
-    {
-      code: "function string_format(source) {}",
-      errors: [{ messageId: "camelcase", type: "Identifier" }],
-    },
-    {
-      code: "function stringFormat(source,type_name) {}",
-      errors: [{ messageId: "camelcase", type: "Identifier" }],
+      errors: [{ messageId: "camelcase", type: "VariableDeclaration" }],
     },
     {
       code: "const LoadingModules = {}",
-      errors: [{ messageId: "camelcase", type: "Identifier" }],
+      errors: [{ messageId: "camelcase", type: "VariableDeclaration" }],
+    },
+    {
+      code: "function string_format(source) {}",
+      errors: [{ messageId: "camelcase", type: "FunctionDeclaration" }],
+    },
+    {
+      code: "function stringFormat(source,type_name) {}",
+      errors: [{ messageId: "camelcase", type: "FunctionDeclaration" }],
     },
   ],
 });
